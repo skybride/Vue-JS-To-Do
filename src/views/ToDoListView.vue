@@ -4,11 +4,11 @@
     <hr>
     <div v-if="!isEditing">
       <input type="text" v-model="toDoItem">
-      <input type="submit" value="Add" @click="addItem">
+      <button @click="addItem">Add</button>
     </div>
     <div v-else>
       <input type="text" v-model="toDoItem">
-      <input type="submit" value="Update" @click="updateItem">
+      <button @click="updateItem">Update</button>
     </div>
     <ul>
       <li v-for="(toDo, index) in toDoItems">
